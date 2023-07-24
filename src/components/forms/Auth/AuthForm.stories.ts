@@ -1,25 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import AuthForm from './AuthForm';
 
-import { Popup } from './Popup';
 
 const meta = {
-    title: 'Popup/Base',
-    component: Popup,
+    title: 'Form/Auth',
+    component: AuthForm,
     parameters: {
         layout: 'centered',
     },
     tags: ['autodocs'],
     argTypes: {},
-} satisfies Meta<typeof Popup>;
+} satisfies Meta<typeof AuthForm>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        name: "popup name",
-        title: "popup title",
-        description: "popup description",
+        style: {},
     },
 };
-

@@ -1,21 +1,19 @@
 import React, {useState} from "react";
 
-interface UseFormProps {
-  [index: string]: string,
+export const useForm = (initialValue: {[index: string]: string}): [
+    {[index: string]: string}, 
+    (evt: React.ChangeEvent<HTMLInputElement>) => void
+] => {
+    const [value, setValue] = useState(initialValue);
+
+    function onChange(evt: React.ChangeEvent<HTMLInputElement>) {
+        setValue({
+          ...value,
+          [`${evt.target.name}`]: evt.target.value,
+        });
+    }
+
+    return [value, onChange];
 }
 
-const useInput = (initialValue: UseFormProps): [UseFormProps, (evt: React.ChangeEvent<HTMLInputElement>) => void] => {
-
-  const [value, setValue] = useState(initialValue);
-
-  function onChange(evt: React.ChangeEvent<HTMLInputElement>) {
-    setValue({
-      ...value,
-      [`${evt.target.name}`]: evt.target.value,
-    });
-  }
-
-  return [value, onChange];
-}
-
-export default useInput;
+export default useForm;
