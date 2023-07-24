@@ -28,6 +28,7 @@ export interface InputProps {
     isValid: boolean;
 }
 
+// TODO: move to Input component
 export const Input = styled.input<InputProps>`
     padding-left: 5px;
     height: 25px;
@@ -64,6 +65,7 @@ export interface ButtonSubmitProps {
     disabled?: boolean;
 }
 
+// TODO: move to Button component
 export const ButtonSubmit = styled.button<ButtonSubmitProps>`
     border: none;
     margin: 25px 0 10px;
