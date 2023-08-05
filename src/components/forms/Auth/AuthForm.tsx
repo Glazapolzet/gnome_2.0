@@ -15,7 +15,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({ style }) => {
         group: false,
     } as {[index: string]: boolean})
 
-    const [formData, setFormData] = useForm({
+    const [formData, _, onFieldChange] = useForm({
         name: "",
         group: "",
     } as {[index: string]: string})
@@ -31,7 +31,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({ style }) => {
     }
 
     function handleChange(evt: React.ChangeEvent<HTMLInputElement>) {
-        setFormData(evt)
+        onFieldChange(evt)
     }
 
     function handleBlur(evt: React.ChangeEvent<HTMLInputElement>) {
