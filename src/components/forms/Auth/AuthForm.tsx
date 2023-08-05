@@ -4,11 +4,11 @@ import { ButtonSubmit, FieldWrapper, Form, Input, InputLabel, Legend } from './s
 
 export interface AuthFormProps {
     style?: CSSProperties;
-    onSubmit: () => void;
 }
 
-export const AuthForm: React.FC<AuthFormProps> = ({style, onSubmit}) => {
+export const AuthForm: React.FC<AuthFormProps> = ({ style }) => {
     // TODO: maybe we should use another solution for form validation logic (ex form-hook lib or formic)
+    // TODO: add on click logic
 
     const [formFieldEntered, setFormFieldEntered] = useState({
         name: false,
@@ -40,9 +40,9 @@ export const AuthForm: React.FC<AuthFormProps> = ({style, onSubmit}) => {
             [`${evt.target.name}`]: true
         });
     }
-
+    
     return (
-        <Form style={style} onSubmit={onSubmit}>
+        <Form style={style} onSubmit={() => {}}>
             <FieldWrapper>
                 <Legend> Данные студента </Legend>
 
