@@ -59,22 +59,21 @@ export const BackgroundMeasureForm: React.FC<BackgroundMeasureFormProps> = ({sty
             </Form>
 
             <ButtonsWrapper>
+
                 <Button
                     form="backgroundForm"
                     type="reset"
                     onClick={resetForm}
-                >
-                    Сброс
-                </Button>
+                    label='Сброс'
+                />
 
-                <Button 
+                <Button
                     form="backgroundForm"
                     type="submit"
                     onClick={() => {}}
                     disabled={false}
-                >
-                    Продолжить
-                </Button>
+                    label='Продолжить'
+                />
 
             </ButtonsWrapper>
         </div>

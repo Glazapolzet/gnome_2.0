@@ -11,9 +11,10 @@ export const DeviceCalibrationForm: React.FC<DeviceCalibrationFormProps> = ({ st
 
     return (
         <Layout style={style}>
-            <Button onClick={() => {}}>
-                Продолжить
-            </Button>
+            <Button
+                onClick={() => {}}
+                label='Продолжить'
+            />
         </Layout>
     )
 }

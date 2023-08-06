@@ -1,4 +1,5 @@
-import { css, styled } from "styled-components";
+import { GrayButton } from "@/components/Button/GrayButton";
+import { styled } from "styled-components";
 
 export const Form = styled.form`
     margin: 20px 0 0;
@@ -75,36 +76,8 @@ export const ButtonsWrapper = styled.div`
     column-gap: 15px;
 `
 
-interface ButtonProps {
-    disabled?: boolean;
-}
-
-// TODO: move to button component
-export const Button = styled.div<ButtonProps>`
+export const Button = styled(GrayButton)`
     min-width: 117px;
     padding: 10px 15px;
-    border: 1px solid rgba(0, 0, 0, 0.55);
-    border-radius: 4px;
-    font-family: inherit;
     font-size: 14px;
-    background-color: #eeeeee;
-
-    ${ ({disabled}) => disabled ? 
-        css`
-            opacity: .7;
-            cursor: default;
-
-            &:hover {
-                background-color: #eeeeee;
-            }
-        `:
-        css`
-            opacity: 1;
-            cursor: pointer;
-
-            &:hover {
-                background-color: #e1e1e1;
-            }
-        `
-    }
 `

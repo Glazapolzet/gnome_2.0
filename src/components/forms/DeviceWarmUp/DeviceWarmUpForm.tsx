@@ -11,17 +11,20 @@ export const DeviceWarmUpForm: React.FC<DeviceWarmUpFormProps> = ({ style }) => 
     return (
         <Layout style={style}>
 
-            <Button onClick={() => {}}>
-                20-30 минут
-            </Button>
+            <Button
+                onClick={() => {}}
+                label='20-30 минут'
+            />
 
-            <Button onClick={() => {}}>
-                10-15 минут
-            </Button>
+            <Button
+                onClick={() => {}}
+                label='10-15 минут'
+            />
 
-            <Button onClick={() => {}}>
-                5 минут
-            </Button>
+            <Button
+                onClick={() => {}}
+                label='5 минут'
+            />
 
         </Layout>
     )
