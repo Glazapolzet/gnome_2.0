@@ -1,12 +1,12 @@
 import React from "react";
 import { Button } from "./styled";
 
-export interface PurpleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface PurpleButtonProps {
     label?: string;
     disabled?: boolean,
 }
 
-export const PurpleButton: React.FC<PurpleButtonProps > = ({ label, disabled, ...rest}) => {
+export const PurpleButton: React.FC<PurpleButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ label, disabled, ...rest}) => {
     return (
         <Button 
             disabled={disabled}
