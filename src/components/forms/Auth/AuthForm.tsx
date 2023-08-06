@@ -71,7 +71,12 @@ export const AuthForm: React.FC<AuthFormProps> = ({ style }) => {
                 />
             </FieldWrapper>
             
-            <ButtonSubmit type="submit" disabled={!formValid}> Начать </ButtonSubmit>
+            <ButtonSubmit 
+                type="submit"
+                disabled={!formValid}
+                label='Начать'
+            />
+
         </Form>
     )
 }

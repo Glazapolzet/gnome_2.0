@@ -1,3 +1,4 @@
+import { PurpleButton } from '@/components/Button/PurpleButton';
 import styled, { css } from 'styled-components'
 
 export const Form = styled.form``;
@@ -61,38 +62,11 @@ export const Input = styled.input<InputProps>`
     }
 `;
 
-export interface ButtonSubmitProps {
-    disabled?: boolean;
-}
-
-// TODO: move to Button component
-export const ButtonSubmit = styled.button<ButtonSubmitProps>`
-    border: none;
+export const ButtonSubmit = styled(PurpleButton)`
     margin: 25px 0 10px;
     padding: 15px 70px;
-    font-family: inherit;
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #372579;
-    border-radius: 4px;
-    transition: opacity 0.3s ease-out;
-    
-    ${ ({disabled}) => disabled ?
-        css`
-            opacity: 0.55;
-            cursor: default;
-            &:hover {
-                opacity: 0.55;
-            };
-        `:
-        css`
-            opacity: 1;
-            cursor: pointer;
-            &:hover {
-                opacity: 0.85;
-            };
-        ` 
-    }
-`;
+`
 
